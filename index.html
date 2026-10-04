@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cafetería Aroma</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8eee7;
+            color: #4b2e20;
+        }
+
+        /* MENÚ */
+        header {
+            background-color: #6f4630;
+            padding: 20px 50px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            color: white;
+            font-size: 28px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #f5c9a8;
+        }
+
+        /* INICIO */
+        .inicio {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            background-image:
+                linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5UXFd5tLaYx2dPqtAisOAuKcBr0HSujTb3T8Tf6EZlg&s=10");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contenido {
+            color: white;
+            max-width: 700px;
+        }
+
+        .contenido h2 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .contenido p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        /* BOTÓN */
+        .boton {
+            display: inline-block;
+            background-color: #c9825b;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background-color: #a85f3d;
+        }
+
+        /* INFORMACIÓN */
+        .informacion {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .informacion h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .tarjetas {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .tarjeta {
+            background-color: white;
+            width: 280px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .tarjeta h3 {
+            margin-bottom: 15px;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #6f4630;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .contenido h2 {
+                font-size: 38px;
+            }
+        }
+
+
+        .tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tarjeta {
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
+}
+
+.tarjeta h3 {
+    margin: 12px 0 8px;
+}
+
+.tarjeta p {
+    font-size: 15px;
+}
+
+.tarjeta strong {
+    font-size: 18px;
+}
+    </style>
+</head>
+
+<body>
+
+   
+
+    <!-- PÁGINA DE INICIO -->
+    <section class="inicio">
+
+        <div class="contenido">
+
+            <h2>Bienvenidos a Cafetería Aroma ☕</h2>
+
+            <p>
+                Un lugar para disfrutar de un delicioso café,
+                postres y momentos especiales.
+            </p>
+
+            <a href="#" class="boton">
+                Ver nuestro menú
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMACIÓN -->
+    <section class="informacion">
+
+        <h2>¿Qué encontrarás?</h2>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+                <h3>☕ Café</h3>
+                <p>
+                    Café recién preparado con diferentes sabores
+                    y estilos.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>🍰 Postres</h3>
+                <p>
+                    Deliciosos pasteles, galletas y postres
+                    para acompañar tu café.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>🌸 Ambiente</h3>
+                <p>
+                    Un espacio cómodo y agradable para pasar
+                    un buen momento.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+
+   <!-- MENÚ DE CAFÉS -->
+<section class="informacion" id="menu">
+
+    <h2>☕ Nuestro Menú</h2>
+
+    <p class="subtitulo">
+        Disfruta nuestros deliciosos cafés preparados al momento.
+    </p>
+
+    <div class="tarjetas">
+
+        <!-- Café Americano -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjwFMiTx05EbyUVYFF8wFoeOh_jXd0svQvwpdeOE3l6A&s=10">
+            <h3>☕ Café Americano</h3>
+            <p>Café espresso acompañado de agua caliente.</p>
+            <strong>$35</strong>
+        </div>
+
+        <!-- Latte -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRTQfcOhaH49ePeACRM4qu4eGjvcM03jOkL04QEk_0oA&s=10">
+            <h3>🥛 Café Latte</h3>
+            <p>Espresso con leche vaporizada y espuma.</p>
+            <strong>$45</strong>
+        </div>
+
+        <!-- Cappuccino -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_jIZMy2zdeZPQthKa0o940VKdJDQlMwjSz_eJatfBhA&s=10">
+            <h3>🤎 Cappuccino</h3>
+            <p>Espresso, leche vaporizada y abundante espuma.</p>
+            <strong>$45</strong>
+        </div>
+
+        <!-- Moka -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSeYhHDI5ec29U4eqXf8jWhqTyINSvzgLZunWDWjPt3w&s=10">
+            <h3>🍫 Café Moka</h3>
+            <p>Espresso con chocolate y leche cremosa.</p>
+            <strong>$50</strong>
+        </div>
+
+        <!-- Espresso -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTENgdqWIWFSTFTE-9Q6qQFp36X-CXSICZSTbdjppLDWQ&s=10">
+            <h3>☕ Espresso</h3>
+            <p>Café concentrado de sabor intenso.</p>
+            <strong>$30</strong>
+        </div>
+
+        <!-- Frappé -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYhHGL-NuE3regC0gZkup03RF9HZn_FZ96bt4f6yDA-Q&s=10">
+            <h3>🧊 Café Frappé</h3>
+            <p>Café frío licuado con hielo y leche.</p>
+            <strong>$55</strong>
+        </div>
+
+        <!-- Affogato -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSAGiBWeZu9_ynthONnDVf187bWOGZ8tBhfprtHf9QAQ&s=10">
+            <h3>🍦 Affogato</h3>
+            <p>Helado de vainilla acompañado de espresso.</p>
+            <strong>$55</strong>
+        </div>
+
+        <!-- Macchiato -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwjtYeD398EYEHQOYgXC-Q0krCITtqwQT0t-RMUiHpPw&s=10">
+            <h3>🥛 Café Macchiato</h3>
+            <p>Espresso con un toque de leche espumada.</p>
+            <strong>$40</strong>
+        </div>
+
+        <!-- Caramel Macchiato -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7txbvr9Hjl1jkPkH2NhLVx4tZE8fzXYh2o7znrAGXWQ&s=10">
+            <h3>🍯 Caramel Macchiato</h3>
+            <p>Café con leche, vainilla y caramelo.</p>
+            <strong>$55</strong>
+        </div>
+
+        <!-- Cold Brew -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnMxiYBDGJgYZt8jUZT6Kpy80tUcjFPDylfwAMIliLBQ&s=10">
+            <h3>🧊 Cold Brew</h3>
+            <p>Café preparado en frío con un sabor suave.</p>
+            <strong>$50</strong>
+        </div>
+
+        <!-- Café Vienés -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnxMfIi56bqb41GR2Do_-51_2Ihsq17UyUGm_yFpmCzQ&s=10">
+            <h3>🍨 Café Vienés</h3>
+            <p>Espresso acompañado de crema batida.</p>
+            <strong>$50</strong>
+        </div>
+
+        <!-- Café con leche -->
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlDC51NbnBeGCdxG1va6aA8PGfWvfU3yMSrQ6mCrGC5g&s=10">
+            <h3>🥛 Café con Leche</h3>
+            <p>Café tradicional mezclado con leche caliente.</p>
+            <strong>$40</strong>
+        </div>
+        
+    </div>
+
+</section>
+    
+</section>
+<!-- MENÚ DE POSTRES -->
+<section class="informacion" id="postres">
+
+    <h2>🍰 Nuestros Postres</h2>
+
+    <p class="subtitulo">
+        Deliciosos postres para acompañar tu café favorito.
+    </p>
+
+    <div class="tarjetas">
+
+        <div class="tarjeta">
+            <img src="data:image/jpeg;base64,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">
+            <h3>🍰 Pastel de Chocolate</h3>
+            <p>Pastel de chocolate suave y delicioso.</p>
+            <strong>$55</strong>
+        </div>
+
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1j3T4OFEu-h2h5xtpABmRvFD9OWfEI3jnPh33QHglWA&s=10">
+            <h3>🍩 Dona</h3>
+            <p>Dona esponjosa con cobertura dulce.</p>
+            <strong>$25</strong>
+        </div>
+
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy_CgKsUwUwAh3Q4nY-9OYRsjMC1URPbEQMNTFwurHnw&s=10">
+            <h3>🍪 Galletas</h3>
+            <p>Galletas recién horneadas con chispas de chocolate.</p>
+            <strong>$20</strong>
+        </div>
+
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY1CVEqGZTgQucjvPDEveUpyI7ztNfgaKcFZgcaahO0Q&s=10">
+            <h3>🍓 Cheesecake</h3>
+            <p>Cheesecake cremoso acompañado de frutos rojos.</p>
+            <strong>$60</strong>
+        </div>
+
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQil690UtKZmpw-qeUNyeu_0ZMEuGpcs6NItRXfsCe4tQ&s=10">
+            <h3>🧁 Cupcake</h3>
+            <p>Pequeño pastel decorado con crema.</p>
+            <strong>$30</strong>
+        </div>
+
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQNnSzbdt2269BWB7FQlhC9dQj8pFwCGJCHNsbjWrNKQ&s=10">
+            <h3>🍫 Brownie</h3>
+            <p>Brownie de chocolate con textura suave.</p>
+            <strong>$35</strong>
+        </div>
+
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT50HkDW0YjMe7z4HiVixyxyZfYW_hYhYkQP1fuc8yFBA&s=10"
+                 alt="Galleta con chocolate">
+            <h3>🍪 Cookie de Chocolate</h3>
+            <p>Galleta grande con trozos de chocolate.</p>
+            <strong>$30</strong>
+        </div>
+        
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4dYGivsJsk-u_g0qRuoioVnSmo9TlO36y8b6ILGfGmg&s=10"
+                 alt="Panna cotta">
+            <h3>🍮 Panna Cotta</h3>
+            <p>Postre cremoso de vainilla con frutos rojos.</p>
+            <strong>$45</strong>
+        </div>
+        
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP9-mZgmVKSZf7g8PIbxe2RmC8Wc5JuzLycHSSC-uw-g&s=10"
+                 alt="Tiramisú">
+            <h3>🍰 Tiramisú</h3>
+            <p>Postre italiano con café, crema y cacao.</p>
+            <strong>$55</strong>
+        </div>
+        
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwK1rP4cQ7LtuIvBA14s3E3ugSuP4t2ve3giT8vWUHpA&s=10"
+                 alt="Helado">
+            <h3>🍨 Helado Artesanal</h3>
+            <p>Helado cremoso disponible en diferentes sabores.</p>
+            <strong>$40</strong>
+        </div>
+        
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRddRmM48vQCJZmma7OuitRS5JfzBYMrjHe01a6O861CQ&s=10"
+                 alt="Waffle">
+            <h3>🧇 Waffle con Fruta</h3>
+            <p>Waffle recién preparado con fruta y miel.</p>
+            <strong>$50</strong>
+        </div>
+        
+        <div class="tarjeta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEZSIfsGELs0CcWK-s8ohwvTPp6iiQ0xk_1x9A9PWnWw&s=10"
+                 alt="Croissant">
+            <h3>🥐 Croissant</h3>
+            <p>Croissant recién horneado, crujiente y suave.</p>
+            <strong>$35</strong>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- AMBIENTE -->
+<section class="informacion ambiente" id="ambiente">
+
+    <h2>🌸 Nuestro Ambiente</h2>
+
+    <div class="ambiente-texto">
+
+        <p>
+            En Cafetería Aroma encontrarás un espacio cómodo,
+            tranquilo y agradable para disfrutar de tu café.
+        </p>
+
+        <p>
+            Puedes venir a platicar con tus amigos, leer un libro,
+            estudiar o simplemente relajarte mientras disfrutas
+            de nuestros productos.
+        </p>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTdbKAnyZwG3RkijxWU5wuV4oxai-ntjWxuNwEaPK11w&s=10"
+             alt="Interior de una cafetería">
+
+    </div>
+
+</section>
+
+
+<!-- NOSOTROS -->
+<section class="informacion" id="nosotros">
+
+    <h2>🌿 Sobre Nosotros</h2>
+
+    <div class="nosotros-texto">
+
+        <p>
+            Cafetería Aroma nació con la idea de crear un lugar
+            donde las personas puedan disfrutar un buen café,
+            deliciosos postres y un ambiente agradable.
+        </p>
+
+        <br>
+
+        <p>
+            Nuestra misión es ofrecer productos preparados con
+            dedicación y brindar una experiencia agradable a
+            todos nuestros clientes.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+<section class="informacion contacto" id="contacto">
+
+    <h2>📞 Contáctanos</h2>
+
+    <p>📍 Dirección: ixtlahuacan del rio (centro)</p>
+    <p>📱 Teléfono: 555-123-4567</p>
+    <p>📧 Correo: cafeteriaaroma@gmail.com</p>
+
+</section>
+
+
+<!-- PIE DE PÁGINA -->
+<footer>
+
+    <p>
+        © 2026 Cafetería Aroma | Todos los derechos reservados
+    </p>
+
+</footer>
+
+
+</body>
+</html>
+
